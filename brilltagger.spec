@@ -13,7 +13,6 @@ Patch1:     %{name}.no-hardcoded-path-check.patch.bz2
 URL:        http://www.cs.jhu.edu/~brill/
 License:    MIT
 Group:      Sciences/Computer science
-BuildRoot:  %{_tmppath}/%{name}-%{version}
 
 %description
 This packages needs a description.
