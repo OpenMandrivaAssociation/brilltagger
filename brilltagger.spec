@@ -1,22 +1,23 @@
 %define name    brilltagger
 %define version 1.14
 %define tag     1_14
-%define release %mkrel 7
+%define release %mkrel 8
 
 Name:       %{name}
 Version:    %{version}
 Release:    %{release}
 Summary:    Rule based tagger
 Source:     http://www.cs.jhu.edu/~brill/RBT%{tag}.tar.bz2
-Patch0:     %{name}.makefile.patch.bz2
-Patch1:     %{name}.no-hardcoded-path-check.patch.bz2
+Patch0:     %{name}.makefile.patch
+Patch1:     %{name}.no-hardcoded-path-check.patch
+# this url no longer work, and it seems it disappeared from internet
 URL:        http://www.cs.jhu.edu/~brill/
 License:    MIT
 Group:      Sciences/Computer science
 BuildRoot:  %{_tmppath}/%{name}-%{version}
 
 %description
-This packages needs a description.
+The Brill tagger is a transformation-based part-of-speech tagger.
 
 %prep
 %setup -q -n RULE_BASED_TAGGER_V%{version}
