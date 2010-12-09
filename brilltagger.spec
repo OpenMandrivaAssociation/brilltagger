@@ -1,7 +1,7 @@
 %define name    brilltagger
 %define version 1.14
 %define tag     1_14
-%define release %mkrel 10
+%define release %mkrel 11
 
 Name:       %{name}
 Version:    %{version}
