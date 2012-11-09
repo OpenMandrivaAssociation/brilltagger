@@ -1,0 +1,50 @@
+--- Makefile~	1994-08-17 15:03:56.000000000 +0200
++++ Makefile	2004-01-08 11:41:56.000000000 +0100
+@@ -1,6 +1,6 @@
+ #  Makefile for Transformation Rule-based Part of Speech Tagger
+ 
+-SHELL = /bin/csh
++SHELL = /bin/sh
+ RM    = /bin/rm -f
+ 
+ #HOMEDIR  = .
+@@ -8,7 +8,7 @@
+ SRCDIR     = ./Utils
+ INCLUDEDIR = ./Utils
+ LIBDIR     = ./Utils
+-BINDIR     = ./Bin_and_Data
++BINDIR     = ./Bin
+ T_DIR      = ./Tagger_Code
+ L_DIR      = ./Learner_Code
+ 
+@@ -44,24 +44,24 @@
+ EXECS = ${L_TARGETS} ${T_TARGETS}
+ 
+ 
+-CFLAGS = -O -I. ${C_INCL}
++CFLAGS = $(RPM_OPT_FLAGS) -I. ${C_INCL}
+ 
+ ${FINAL} : ${EXECS}
+ 
+ $(LIBDIR)/lex.o : $(SRCDIR)/lex.c
+-	cc -c -o $@ $<
++	cc $(CFLAGS) -c -o $@ $<
+ 
+ $(LIBDIR)/useful.o : $(SRCDIR)/useful.c
+-	cc -c -o $@ $<
++	cc $(CFLAGS) -c -o $@ $<
+ 
+ $(LIBDIR)/darray.o : $(SRCDIR)/darray.c
+-	cc -c -o $@ $<
++	cc $(CFLAGS) -c -o $@ $<
+ 
+ $(LIBDIR)/registry.o : $(SRCDIR)/registry.c
+-	cc -c -o $@ $<
++	cc $(CFLAGS) -c -o $@ $<
+ 
+ $(LIBDIR)/memory.o : $(SRCDIR)/memory.c
+-	cc -c -o $@ $<
++	cc $(CFLAGS) -c -o $@ $<
+ 
+ ${T_TARGETS} : ${OBJ} 
+ 	cc $(CFLAGS) ${OBJ} -o $(BINDIR)/$@ $(T_DIR)/$@.c
