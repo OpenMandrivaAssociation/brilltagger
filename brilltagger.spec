@@ -47,3 +47,51 @@ rm -rf %{buildroot}
 %{_bindir}/*
 %{_datadir}/%{name}
 
+
+
+%changelog
+* Thu Dec 09 2010 Oden Eriksson <oeriksson@mandriva.com> 1.14-11mdv2011.0
++ Revision: 616838
+- the mass rebuild of 2010.0 packages
+
+* Wed Sep 02 2009 Thierry Vignaud <tv@mandriva.org> 1.14-10mdv2010.0
++ Revision: 424689
+- rebuild
+
+* Thu Aug 07 2008 Thierry Vignaud <tv@mandriva.org> 1.14-9mdv2009.0
++ Revision: 266402
+- rebuild early 2009.0 package (before pixel changes)
+
+* Mon May 26 2008 Michael Scherer <misc@mandriva.org> 1.14-8mdv2009.0
++ Revision: 211372
+- bunzip patchs
+- add a description
+
+* Sat May 24 2008 Guillaume Rousse <guillomovitch@mandriva.org> 1.14-7mdv2009.0
++ Revision: 210925
+- rebuild
+- rebuild
+
+  + Olivier Blin <oblin@mandriva.com>
+    - restore BuildRoot
+
+  + Thierry Vignaud <tv@mandriva.org>
+    - kill re-definition of %%buildroot on Pixel's request
+    - import brilltagger
+
+
+* Tue Aug 01 2006 Guillaume Rousse <guillomovitch@mandriva.org> 1.14-5mdv2007.0
+- %%mkrel
+- fix doc files perms
+
+* Thu Jul 28 2005 Guillaume Rousse <guillomovitch@mandriva.org> 1.14-4mdk 
+- spec cleanup 
+
+* Thu Jul 08 2004 Guillaume Rousse <guillomovitch@mandrake.org> 1.14-3mdk 
+- rpmbuilupdate aware
+
+* Fri Jan 16 2004 Guillaume Rousse <guillomovitch@mandrake.org> 1.14-2mdk
+- fix stupid check for other binaries
+
+* Thu Jan 08 2004 Guillaume Rousse <guillomovitch@mandrake.org> 1.14-1mdk
+- first mdk release
