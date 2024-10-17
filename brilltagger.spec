@@ -11,7 +11,7 @@ Source:     http://www.cs.jhu.edu/~brill/RBT%{tag}.tar.bz2
 Patch0:     %{name}.makefile.patch
 Patch1:     %{name}.no-hardcoded-path-check.patch
 # this url no longer work, and it seems it disappeared from internet
-URL:        http://www.cs.jhu.edu/~brill/
+URL:        https://www.cs.jhu.edu/~brill/
 License:    MIT
 Group:      Sciences/Computer science
 BuildRoot:  %{_tmppath}/%{name}-%{version}
