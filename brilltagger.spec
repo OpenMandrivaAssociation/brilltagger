@@ -16,6 +16,7 @@ License:    MIT
 Group:      Sciences/Computer science
 BuildRoot:  %{_tmppath}/%{name}-%{version}
 
+BuildRequires:	make
 %description
 The Brill tagger is a transformation-based part-of-speech tagger.
 
